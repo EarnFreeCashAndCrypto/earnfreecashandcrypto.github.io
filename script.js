@@ -1,9 +1,8 @@
 // ============================================
 // EFCAC - UNIVERSAL SCRIPT (works on ALL pages)
-// Includes: data, page config, dropdown fix, footer
-// All site logos point to local /images/*.webp
-// Footer logo added next to brand name
-// + ALL missing sites from source HTML added
+// ============================================
+// NOTE: Menu and footer are handled by menu.js
+// This file only handles page data + rendering
 // ============================================
 
 // ---- HOME PAGE DATA ----
@@ -25,20 +24,17 @@ const homeSitesData = [
   { name: "BCHgames", category: "Faucet & Games", description: "🏆 Claim free BCH - play and win!", bonus: "Claim faucet every 5 minutes", features: ["Level up and get a rewards", "Giveaway every 30 minutes"], link: "https://bch.games/play/EXMA", withdrawMethod: "MEXC", withdrawLink: "https://www.mexc.com/?shareCode=mexc-EXMA", logo: "images/BCHgames.webp", badges: ["Contest", "Fast Pay"] },
   { name: "Nuts", category: "Faucet & Games", description: "🏆 Claim free solana - play and win!", bonus: "Claim faucet every 3 minutes", features: ['Claim the faucet in the "Perks"', "Earn rewards by leveling up!"], link: "https://nuts.gg/play/SCALEVANCE", withdrawMethod: "MEXC", withdrawLink: "https://www.mexc.com/?shareCode=mexc-EXMA", logo: "images/Nuts.webp", badges: ["Contest", "Fast Pay"] },
   { name: "TrustDice", category: "Faucet & Games", description: "🔥 Claim the highest faucet rewards", bonus: "Claim $0.04 in TRX every 6 hours", features: ['Find faucet in "Bonus" section', "Welcome Bonus - 500% + 100 FS"], link: "https://trustdice.win/faucet?ref=u_biscore", withdrawMethod: "MEXC", withdrawLink: "https://www.mexc.com/?shareCode=mexc-EXMA", logo: "images/TrustDice.webp", badges: ["Bonus", "Contest"] },
-    // ---- NETWORK CARDS (Lux, Pick, Kong, FMatrix) ----
   { name: "Lux Sites", category: "Faucet network", description: "✅ Get paid for surveys and offers!", bonus: "Claim up to $25 per faucet claim!", features: ["Verify Email & Get 10 Bonus Rolls", "Increase your level & earn more"], link: "lux-sites.html", withdrawMethod: "Lux Sites", withdrawLink: "lux-sites.html", logo: "images/LuxSites.webp", badges: ["7 Bonuses", "Available"] },
   { name: "Pick Sites", category: "Faucet network", description: "✅ Get paid for surveys and offers!", bonus: "Claim up to $10 per faucet claim!", features: ["Verify Email & Get 10 Bonus Rolls", "Multiply rewards up to 4,850x"], link: "pick-sites.html", withdrawMethod: "Pick Sites", withdrawLink: "pick-sites.html", logo: "images/PickSites.webp", badges: ["9 Bonuses", "Available"] },
   { name: "Kong Sites", category: "Faucet network", description: "✅ Get paid for surveys and offers!", bonus: "Claim up to $25 per faucet claim!", features: ["Verify Email & Get 10 Bonus Rolls", "More Blocks = Higher Rewards!"], link: "kong-sites.html", withdrawMethod: "Kong Sites", withdrawLink: "kong-sites.html", logo: "images/KongSites.webp", badges: ["11 Bonuses", "Available"] },
   { name: "FMatrix", category: "Faucet network", description: "✅ Get paid for surveys and offers!", bonus: "Claim up to $25 per faucet claim!", features: ["Weekly wagering contest - live!", "Level up & earn higher rewards"], link: "faucetmatrix-sites.html", withdrawMethod: "FMatrix", withdrawLink: "faucetmatrix-sites.html", logo: "images/FMatrix.webp", badges: ["12 Cryptos", "Available"] },
-  
-  // ---- NEW SITES ADDED FROM SOURCE ----
   { name: "Beegobox", category: "Faucet & Games", description: "🎁 Sign up bonus + multiplier rewards!", bonus: "Get Free $1 sign up bonus!", features: ["Claim faucet every 5 min 0.0010€", "PTC ads - Social Networks - CPA"], link: "https://beegobox.com?ref=5849", withdrawMethod: "FaucetPay", withdrawLink: "https://faucetpay.io/?r=9738732", logo: "images/Beegobox.webp", badges: ["Bonus", "Fast Pay"] },
   { name: "ByteLixir", category: "Passive Income", description: "💸 Passive income from bandwidth sharing", bonus: "Get Free $1 sign up bonus", features: ["Idle earning app", "PTC ads - Social Networks - CPA"], link: "https://bytelixir.com/r/LXBZNW4KQXLZ", withdrawMethod: "PayPal", withdrawLink: "https://www.paypal.com/", logo: "images/ByteLixir.webp", badges: ["TOP", "EASY"] },
   { name: "PawnsApp", category: "Passive Income", description: "💰 Get paid for sharing your internet", bonus: "Get paid to share your unused internet", features: ["Idle earning on desktop & mobile", "Withdraw via PayPal or crypto"], link: "https://pawns.app/?r=520649", withdrawMethod: "PayPal", withdrawLink: "https://www.paypal.com/", logo: "images/PawnsApp.webp", badges: ["TOP", "Trusted"] },
   { name: "Freecash", category: "Offers & Rewards", description: "💰 Get up to Free $5 Sign Up Bonus!", bonus: "Get up to Free $5 Sign Up Bonus!", features: ["Complete offers, surveys & games", "Fastest payouts via crypto"], link: "https://freecash.com/r/SCV", withdrawMethod: "MEXC", withdrawLink: "https://www.mexc.com/?shareCode=mexc-EXMA", logo: "images/Freecash.webp", badges: ["TOP", "HOT"] },
   { name: "Getlike", category: "Social Tasks", description: "💸 Earn for completing social tasks", bonus: "Earn by completing social media tasks", features: ["Get paid for likes & followers", "Fast PayPal withdrawals"], link: "https://getlike.io/en/?ref=1056338", withdrawMethod: "PayPal", withdrawLink: "https://www.paypal.com/", logo: "images/Getlike.webp", badges: ["Bonus", "EASY"] },
   { name: "Gemsloot", category: "Play & Earn", description: "🎮 Play games & earn rewards!", bonus: "🎁 Start Earning Now", features: ["Play games, earn gems", "Trade gems for cash & crypto"], link: "https://gemsloot.com/?aff=scalevance", withdrawMethod: "MEXC", withdrawLink: "https://www.mexc.com/?shareCode=mexc-EXMA", logo: "images/Gemsloot.webp", badges: ["Bonus", "Play"] },
-  { name: "CoinsGame", category: "Faucet & Games", description: "🎰 Play games & claim faucet rewards!", bonus: "Play and win big!", features: ["Casino games with faucet rewards", "Fast crypto withdrawals"], link: "https://coins.game/c/149887_8926af10", withdrawMethod: "MEXC", withdrawLink: "https://www.mexc.com/?shareCode=mexc-EXMA", logo: "images/CoinsGame.webp", badges: ["Bonus", "Contest"] }
+
 ];
 
 // ---- LUX SITES DATA ----
@@ -100,8 +96,19 @@ const playEarn = [
   { name: "BCHgames", category: "Faucet & Games", description: "🏆 Claim free BCH - play and win!", bonus: "Claim faucet every 5 minutes", features: ["Level up and get a rewards", "Giveaway every 30 minutes"], link: "https://bch.games/play/EXMA", withdrawMethod: "MEXC", withdrawLink: "https://www.mexc.com/?shareCode=mexc-EXMA", logo: "images/BCHgames.webp", badges: ["Contest", "Fast Pay"] },
   { name: "Nuts", category: "Faucet & Games", description: "🏆 Claim free solana - play and win!", bonus: "Claim faucet every 3 minutes", features: ['Claim the faucet in the "Perks"', "Earn rewards by leveling up!"], link: "https://nuts.gg/play/SCALEVANCE", withdrawMethod: "MEXC", withdrawLink: "https://www.mexc.com/?shareCode=mexc-EXMA", logo: "images/Nuts.webp", badges: ["Contest", "Fast Pay"] },
   { name: "TrustDice", category: "Faucet & Games", description: "🔥 Claim the highest faucet rewards", bonus: "Claim $0.04 in TRX every 6 hours", features: ['Find faucet in "Bonus" section', "Welcome Bonus - 500% + 100 FS"], link: "https://trustdice.win/faucet?ref=u_biscore", withdrawMethod: "MEXC", withdrawLink: "https://www.mexc.com/?shareCode=mexc-EXMA", logo: "images/TrustDice.webp", badges: ["Bonus", "Contest"] },
-  { name: "CoinsGame", category: "Faucet & Games", description: "🎰 Play games & claim faucet rewards!", bonus: "Play and win big!", features: ["Casino games with faucet rewards", "Fast crypto withdrawals"], link: "https://coins.game/c/149887_8926af10", withdrawMethod: "MEXC", withdrawLink: "https://www.mexc.com/?shareCode=mexc-EXMA", logo: "images/CoinsGame.webp", badges: ["Bonus", "Contest"] }
 ];
+
+// ---- EARN BY SOCIAL MEDIA DATA ----
+const earnSocial = [
+   { name: "Vboost", category: "Social Tasks", description: "💸 Earn from social content engagement", bonus: "Earn for engaging with posts", features: ["Swipe through sponsored posts", "Earn per engagement"], link: "https://vboost.ru/r/bAYx57Cl", withdrawMethod: "Crypto", withdrawLink: "#", logo: "images/vboost.webp", badges: ["NEW", "EASY"] },
+  { name: "Getlike", category: "Social Tasks", description: "💸 Earn for completing social tasks", bonus: "Earn by completing social media tasks", features: ["Get paid for likes & followers", "Fast PayPal withdrawals"], link: "https://getlike.io/en/?ref=1056338", withdrawMethod: "PayPal", withdrawLink: "https://www.paypal.com/", logo: "images/Getlike.webp", badges: ["Bonus", "EASY"] },
+  { name: "FollowFast", category: "Social Tasks", description: "📱 Get paid to follow & engage!", bonus: "Earn by following social accounts", features: ["Follow, like & share tasks", "Multiple social platforms supported"], link: "https://followfast.com/?ref=scalevance", withdrawMethod: "PayPal", withdrawLink: "https://www.paypal.com/", logo: "images/FollowFast.webp", badges: ["NEW", "EASY"] },
+  { name: "SocialEarn", category: "Social Tasks", description: "💰 Monetize your social media presence", bonus: "Get paid for posting content", features: ["Post sponsored content", "Earn from engagement"], link: "https://socialearn.com/?ref=scalevance", withdrawMethod: "MEXC", withdrawLink: "https://www.mexc.com/?shareCode=mexc-EXMA", logo: "images/SocialEarn.webp", badges: ["TOP", "Bonus"] },
+  { name: "InstaPay", category: "Social Tasks", description: "📸 Earn from Instagram tasks", bonus: "Complete Instagram tasks & earn", features: ["Like, comment & follow tasks", "Daily new tasks available"], link: "https://instapay.com/?ref=scalevance", withdrawMethod: "PayPal", withdrawLink: "https://www.paypal.com/", logo: "images/InstaPay.webp", badges: ["EASY", "Fast Pay"] },
+  { name: "TikTokEarn", category: "Social Tasks", description: "🎵 Earn by creating TikTok content", bonus: "Get paid per video view", features: ["Create short videos", "Earn based on views"], link: "https://tiktokearn.com/?ref=scalevance", withdrawMethod: "MEXC", withdrawLink: "https://www.mexc.com/?shareCode=mexc-EXMA", logo: "images/TikTokEarn.webp", badges: ["NEW", "HOT"] },
+  { name: "TweetPay", category: "Social Tasks", description: "🐦 Get paid for Twitter/X tasks", bonus: "Earn for tweets & retweets", features: ["Tweet & retweet tasks", "Engage with sponsored content"], link: "https://tweetpay.com/?ref=scalevance", withdrawMethod: "PayPal", withdrawLink: "https://www.paypal.com/", logo: "images/TweetPay.webp", badges: ["Bonus", "EASY"] },
+  { name: "YouGet", category: "Social Tasks", description: "▶️ Earn from YouTube engagement", bonus: "Get paid for watching & subscribing", features: ["Watch videos & subscribe", "Like, comment & share tasks"], link: "https://youget.com/?ref=scalevance", withdrawMethod: "PayPal", withdrawLink: "https://www.paypal.com/", logo: "images/YouGet.webp", badges: ["TOP", "Trusted"] },
+ ];
 
 // ============================================
 // PAGE CONFIGURATION
@@ -147,7 +154,7 @@ const PAGE_CONFIG = {
     stats: ["🛡️ 4 Trusted Sites", "💰 4 Cryptocurrencies", "⚡ Instant Withdrawals"],
     showTip: true
   },
-  'earncrypto': {
+  'earn-crypto': {
     data: earnCrypto,
     tag: "● EARN CRYPTO",
     title: 'Earn <span class="highlight">Free Crypto</span> Instantly!',
@@ -169,6 +176,14 @@ const PAGE_CONFIG = {
     title: 'Play Games & <span class="highlight">Earn Rewards!</span>',
     subtitle: "Play casual games, complete tasks, and earn real rewards.",
     stats: ["🎮 Fun Games", "🎁 Real Rewards", "⚡ Fast Payouts"],
+    showTip: true
+  },
+  'earn-social': {
+    data: earnSocial,
+    tag: "● EARN BY SOCIAL MEDIA",
+    title: 'Get Paid for <span class="highlight">Social Media Tasks!</span>',
+    subtitle: "Earn money by liking, following, sharing, and posting on social media platforms.",
+    stats: ["📱 Social Tasks", "💰 Real Cash Rewards", "⚡ Fast Payouts"],
     showTip: true
   }
 };
@@ -193,21 +208,49 @@ function renderCards(data, containerId) {
   grid.innerHTML = '';
 
   data.forEach(site => {
+    // ---- BUILD BADGES (with fire icon for TOP / HOT) ----
     let badgesHtml = '';
     if (site.badges && site.badges.length > 0) {
       site.badges.forEach(badge => {
         let badgeClass = 'badge-bonus';
+
         if (badge === 'NEW') badgeClass = 'badge-new';
         if (badge === 'HOT' || badge === 'TOP' || badge === 'Popular') badgeClass = 'badge-popular';
-        badgesHtml += `<span class="badge ${badgeClass}">${badge}</span>`;
+
+        // TOP badge → fire icon
+        if (badge === 'TOP') {
+          badgesHtml += `
+            <span class="badge ${badgeClass} badge-with-icon">
+              <svg class="badge-icon" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M323.56 51.2c-20.8 19.3-39.58 39.59-56.22 59.97C240.08 73.62 206.28 35.53 168 0 69.74 91.17 0 209.96 0 281.6 0 408.85 100.29 512 224 512s224-103.15 224-230.4c0-53.27-51.98-163.14-124.44-230.4zm-19.47 340.65C282.43 407.01 255.72 416 226.86 416 154.71 416 96 368.26 96 290.75c0-38.61 24.31-72.63 72.79-130.75 6.93 7.98 98.83 125.34 98.83 125.34l58.63-66.88c4.14 6.85 7.91 13.55 11.27 19.97 27.35 52.19 15.81 118.97-33.43 153.42z"/>
+              </svg>
+              <span>${badge}</span>
+            </span>`;
+        }
+        // HOT badge → fire icon
+        else if (badge === 'HOT') {
+          badgesHtml += `
+            <span class="badge ${badgeClass} badge-with-icon">
+              <svg class="badge-icon" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M323.56 51.2c-20.8 19.3-39.58 39.59-56.22 59.97C240.08 73.62 206.28 35.53 168 0 69.74 91.17 0 209.96 0 281.6 0 408.85 100.29 512 224 512s224-103.15 224-230.4c0-53.27-51.98-163.14-124.44-230.4zm-19.47 340.65C282.43 407.01 255.72 416 226.86 416 154.71 416 96 368.26 96 290.75c0-38.61 24.31-72.63 72.79-130.75 6.93 7.98 98.83 125.34 98.83 125.34l58.63-66.88c4.14 6.85 7.91 13.55 11.27 19.97 27.35 52.19 15.81 118.97-33.43 153.42z"/>
+              </svg>
+              <span>${badge}</span>
+            </span>`;
+        }
+        // All other badges → plain
+        else {
+          badgesHtml += `<span class="badge ${badgeClass}">${badge}</span>`;
+        }
       });
     }
 
+    // ---- BUILD FEATURE LIST ----
     let featuresHtml = '';
     site.features.forEach(feature => {
       featuresHtml += `<li><i>🎁</i><span>${feature}</span></li>`;
     });
 
+    // ---- BUILD CARD ----
     const card = document.createElement('div');
     card.className = 'site-card';
     card.innerHTML = `
@@ -241,118 +284,18 @@ function renderCards(data, containerId) {
 }
 
 // ============================================
-// INJECT FOOTER (auto-added on every page)
-// ============================================
-function injectFooter() {
-  if (document.querySelector('.site-footer')) return;
-
-  const footerHTML = `
-    <footer class="site-footer">
-      <div class="footer-container">
-        <div class="footer-brand">
-          <h3 class="footer-logo-wrap">
-            <svg class="footer-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" aria-hidden="true">
-              <defs>
-                <radialGradient id="footCoinG" cx="35%" cy="30%">
-                  <stop offset="0%" stop-color="#FFE9A8"/>
-                  <stop offset="60%" stop-color="#F5B942"/>
-                  <stop offset="100%" stop-color="#C98A1E"/>
-                </radialGradient>
-                <linearGradient id="footAccG" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#FF6B2C"/>
-                  <stop offset="100%" stop-color="#E64A00"/>
-                </linearGradient>
-              </defs>
-              <ellipse cx="100" cy="155" rx="80" ry="28" fill="#A5650E"/>
-              <ellipse cx="100" cy="148" rx="80" ry="28" fill="url(#footCoinG)"/>
-              <ellipse cx="100" cy="140" rx="80" ry="28" fill="#A5650E"/>
-              <ellipse cx="100" cy="133" rx="80" ry="28" fill="url(#footCoinG)"/>
-              <circle cx="100" cy="85" r="65" fill="url(#footCoinG)"/>
-              <circle cx="100" cy="85" r="65" fill="none" stroke="#8B5708" stroke-width="2" opacity="0.4"/>
-              <circle cx="100" cy="85" r="52" fill="none" stroke="#8B5708" stroke-width="2" opacity="0.5"/>
-              <text x="100" y="112" font-family="Arial Black, sans-serif" font-size="78" text-anchor="middle" fill="#5B3600" font-weight="900">$</text>
-              <circle cx="160" cy="45" r="22" fill="url(#footAccG)"/>
-              <path d="M152 45 L158 51 L170 39" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span>EFCAC</span>
-          </h3>
-          <p>Explore the best ways to earn free cash &amp; crypto. Find trusted earning platforms, faucets, apps and offers — carefully reviewed and checked by us.</p>
-          <div class="footer-social">
-            <a href="#" aria-label="Twitter" title="Twitter">𝕏</a>
-            <a href="#" aria-label="Telegram" title="Telegram">✈</a>
-            <a href="#" aria-label="YouTube" title="YouTube">▶</a>
-            <a href="#" aria-label="Discord" title="Discord">💬</a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Earn &amp; Multiply</h4>
-          <ul>
-            <li><a href="lux-sites.html">→ Lux Sites</a></li>
-            <li><a href="pick-sites.html">→ Pick Sites</a></li>
-            <li><a href="faucetmatrix-sites.html">→ FaucetMatrix Sites</a></li>
-            <li><a href="kong-sites.html">→ Kong Sites</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="index.html">→ Top Earning</a></li>
-            <li><a href="#">→ Earn Crypto</a></li>
-            <li><a href="#">→ Passive Income</a></li>
-            <li><a href="#">→ Play &amp; Earn</a></li>
-            <li><a href="#">→ Free Spins</a></li>
-            <li><a href="#">→ Telegram Apps</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Support</h4>
-          <ul>
-            <li><a href="about.html">→ About Us</a></li>
-            <li><a href="contact.html">→ Contact</a></li>
-            <li><a href="privacy.html">→ Privacy Policy</a></li>
-            <li><a href="terms.html">→ Terms of Service</a></li>
-            <li><a href="disclaimer.html">→ Disclaimer</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div>© 2026 EFCAC. All rights reserved.</div>
-        <div class="footer-legal">
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Terms</a>
-          <a href="disclaimer.html">Disclaimer</a>
-          <a href="index.html">Sitemap</a>
-        </div>
-      </div>
-    </footer>
-  `;
-
-  document.body.insertAdjacentHTML('beforeend', footerHTML);
-}
-
-// ============================================
 // INIT - runs on every page
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
   const currentPage = getCurrentPage();
   const config = PAGE_CONFIG[currentPage];
 
-  // 1. Active nav link
-  document.querySelectorAll('[data-page]').forEach(el => {
-    if (el.dataset.page === currentPage) el.classList.add('active');
-  });
-
-  // 2. Highlight dropdown parent when on a sub-page
-  if (currentPage !== 'index') {
-    const dropdownLink = document.querySelector('[data-dropdown]');
-    if (dropdownLink) dropdownLink.classList.add('active');
+  if (!config) {
+    console.warn('EFCAC: No config found for page:', currentPage);
+    return;
   }
 
-  // 3. Update hero content
+  // 1. Update hero content
   const heroTag = document.getElementById('heroTag');
   const heroTitle = document.getElementById('heroTitle');
   const heroSubtitle = document.getElementById('heroSubtitle');
@@ -370,63 +313,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }).join('');
   }
 
-  // 4. Show / hide tip bar
+  // 2. Show / hide tip bar
   const tipBar = document.getElementById('tipBar');
   if (tipBar && !config.showTip) tipBar.style.display = 'none';
 
-  // 5. Update page title
+  // 3. Update page title
   const titles = {
     'index': 'EFCAC – Earn Free Crypto!',
     'lux-sites': 'Lux Sites - EFCAC',
     'pick-sites': 'Pick Sites - EFCAC',
     'faucetmatrix-sites': 'FaucetMatrix Sites - EFCAC',
     'kong-sites': 'Kong Sites - EFCAC',
-    'earncrypto': 'Earn Crypto - EFCAC',
+    'earn-crypto': 'Earn Crypto - EFCAC',
     'passive-income': 'Passive Income - EFCAC',
-    'play-earn': 'Play & Earn - EFCAC'
+    'play-earn': 'Play & Earn - EFCAC',
+    'earn-social': 'Earn By Social Media - EFCAC'
   };
   if (titles[currentPage]) document.title = titles[currentPage];
 
-  // 6. Render cards
-  renderCards(config.data, 'siteGrid');
-
-  // 7. DROPDOWN — hover intent + click toggle
-  const dropdown = document.querySelector('.dropdown');
-  const dropdownToggle = document.querySelector('[data-dropdown]');
-
-  if (dropdown && dropdownToggle) {
-    let hoverTimer = null;
-
-    dropdown.addEventListener('mouseenter', () => {
-      clearTimeout(hoverTimer);
-      dropdown.classList.add('open');
-    });
-
-    dropdown.addEventListener('mouseleave', () => {
-      hoverTimer = setTimeout(() => {
-        dropdown.classList.remove('open');
-      }, 150);
-    });
-
-    dropdownToggle.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      dropdown.classList.toggle('open');
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!dropdown.contains(e.target)) {
-        dropdown.classList.remove('open');
-      }
-    });
-
-    dropdown.querySelectorAll('.dropdown-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        dropdown.classList.remove('open');
-      });
-    });
-  }
-
-  // 8. Inject footer
-  injectFooter();
+  // 4. Render cards (only if grid exists)
+  const grid = document.getElementById('siteGrid');
+  if (grid) renderCards(config.data, 'siteGrid');
 });
