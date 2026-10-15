@@ -1,5 +1,5 @@
 // ============================================
-// EFCAC - UNIVERSAL SCRIPT (works on ALL pages)
+// EFCAC - UNIVERSAL SCRIPT (Eatly Purple Theme)
 // ============================================
 // NOTE: Menu and footer are handled by menu.js
 // This file only handles page data + rendering
@@ -34,7 +34,6 @@ const homeSitesData = [
   { name: "Freecash", category: "Offers & Rewards", description: "💰 Get up to Free $5 Sign Up Bonus!", bonus: "Get up to Free $5 Sign Up Bonus!", features: ["Complete offers, surveys & games", "Fastest payouts via crypto"], link: "https://freecash.com/r/SCV", withdrawMethod: "MEXC", withdrawLink: "https://www.mexc.com/?shareCode=mexc-EXMA", logo: "images/Freecash.webp", badges: ["TOP", "HOT"] },
   { name: "Getlike", category: "Social Tasks", description: "💸 Earn for completing social tasks", bonus: "Earn by completing social media tasks", features: ["Get paid for likes & followers", "Fast PayPal withdrawals"], link: "https://getlike.io/en/?ref=1056338", withdrawMethod: "PayPal", withdrawLink: "https://www.paypal.com/", logo: "images/Getlike.webp", badges: ["Bonus", "EASY"] },
   { name: "Gemsloot", category: "Play & Earn", description: "🎮 Play games & earn rewards!", bonus: "🎁 Start Earning Now", features: ["Play games, earn gems", "Trade gems for cash & crypto"], link: "https://gemsloot.com/?aff=scalevance", withdrawMethod: "MEXC", withdrawLink: "https://www.mexc.com/?shareCode=mexc-EXMA", logo: "images/Gemsloot.webp", badges: ["Bonus", "Play"] },
-
 ];
 
 // ---- LUX SITES DATA ----
@@ -100,14 +99,15 @@ const playEarn = [
 
 // ---- EARN BY SOCIAL MEDIA DATA ----
 const earnSocial = [
+   { name: "Getlike", category: "Social Tasks", description: "💸 6.1M+ users | 1.2B+ tasks completed", bonus: "Earn real money for social tasks", features: ["Like, follow, comment & repost tasks", "Payouts every 48h - min. $2", "Earn 50% from referral commissions"], link: "https://getlike.io/en/?ref=1056338", withdrawMethod: "PayPal", withdrawLink: "https://www.paypal.com/", logo: "images/Getlike.webp", badges: ["TOP", "Trusted"] },
+   { name: "Aviso", category: "Social Tasks", description: "💸 8+ years running | 4M+ users", bonus: "Earn for microtasks & surveys", features: ["Visit sites, test products, take surveys", "Tasks available on PC & mobile"], link: "https://aviso.bz/?r=ytman0164", withdrawMethod: "Crypto", withdrawLink: "#", logo: "images/aviso.webp", badges: ["Trusted", "Bonus"] },
    { name: "Vboost", category: "Social Tasks", description: "💸 Earn from social content engagement", bonus: "Earn for engaging with posts", features: ["Swipe through sponsored posts", "Earn per engagement"], link: "https://vboost.ru/r/bAYx57Cl", withdrawMethod: "Crypto", withdrawLink: "#", logo: "images/vboost.webp", badges: ["NEW", "EASY"] },
-  { name: "Getlike", category: "Social Tasks", description: "💸 Earn for completing social tasks", bonus: "Earn by completing social media tasks", features: ["Get paid for likes & followers", "Fast PayPal withdrawals"], link: "https://getlike.io/en/?ref=1056338", withdrawMethod: "PayPal", withdrawLink: "https://www.paypal.com/", logo: "images/Getlike.webp", badges: ["Bonus", "EASY"] },
-  { name: "FollowFast", category: "Social Tasks", description: "📱 Get paid to follow & engage!", bonus: "Earn by following social accounts", features: ["Follow, like & share tasks", "Multiple social platforms supported"], link: "https://followfast.com/?ref=scalevance", withdrawMethod: "PayPal", withdrawLink: "https://www.paypal.com/", logo: "images/FollowFast.webp", badges: ["NEW", "EASY"] },
-  { name: "SocialEarn", category: "Social Tasks", description: "💰 Monetize your social media presence", bonus: "Get paid for posting content", features: ["Post sponsored content", "Earn from engagement"], link: "https://socialearn.com/?ref=scalevance", withdrawMethod: "MEXC", withdrawLink: "https://www.mexc.com/?shareCode=mexc-EXMA", logo: "images/SocialEarn.webp", badges: ["TOP", "Bonus"] },
-  { name: "InstaPay", category: "Social Tasks", description: "📸 Earn from Instagram tasks", bonus: "Complete Instagram tasks & earn", features: ["Like, comment & follow tasks", "Daily new tasks available"], link: "https://instapay.com/?ref=scalevance", withdrawMethod: "PayPal", withdrawLink: "https://www.paypal.com/", logo: "images/InstaPay.webp", badges: ["EASY", "Fast Pay"] },
-  { name: "TikTokEarn", category: "Social Tasks", description: "🎵 Earn by creating TikTok content", bonus: "Get paid per video view", features: ["Create short videos", "Earn based on views"], link: "https://tiktokearn.com/?ref=scalevance", withdrawMethod: "MEXC", withdrawLink: "https://www.mexc.com/?shareCode=mexc-EXMA", logo: "images/TikTokEarn.webp", badges: ["NEW", "HOT"] },
-  { name: "TweetPay", category: "Social Tasks", description: "🐦 Get paid for Twitter/X tasks", bonus: "Earn for tweets & retweets", features: ["Tweet & retweet tasks", "Engage with sponsored content"], link: "https://tweetpay.com/?ref=scalevance", withdrawMethod: "PayPal", withdrawLink: "https://www.paypal.com/", logo: "images/TweetPay.webp", badges: ["Bonus", "EASY"] },
-  { name: "YouGet", category: "Social Tasks", description: "▶️ Earn from YouTube engagement", bonus: "Get paid for watching & subscribing", features: ["Watch videos & subscribe", "Like, comment & share tasks"], link: "https://youget.com/?ref=scalevance", withdrawMethod: "PayPal", withdrawLink: "https://www.paypal.com/", logo: "images/YouGet.webp", badges: ["TOP", "Trusted"] },
+   { name: "FollowFast", category: "Social Tasks", description: "📱 Get paid to follow & engage!", bonus: "Earn by following social accounts", features: ["Follow, like & share tasks", "Multiple social platforms supported"], link: "https://followfast.com", withdrawMethod: "PayPal", withdrawLink: "https://www.paypal.com/", logo: "images/FollowFast.webp", badges: ["NEW", "EASY"] },
+   { name: "SocialEarn", category: "Social Tasks", description: "💰 Monetize your social media presence", bonus: "Get paid for posting content", features: ["Post sponsored content", "Earn from engagement"], link: "https://socialearn.com", withdrawMethod: "MEXC", withdrawLink: "https://www.mexc.com/?shareCode=mexc-EXMA", logo: "images/SocialEarn.webp", badges: ["TOP", "Bonus"] },
+   { name: "InstaPay", category: "Social Tasks", description: "📸 Earn from Instagram tasks", bonus: "Complete Instagram tasks & earn", features: ["Like, comment & follow tasks", "Daily new tasks available"], link: "https://instapay.com", withdrawMethod: "PayPal", withdrawLink: "https://www.paypal.com/", logo: "images/InstaPay.webp", badges: ["EASY", "Fast Pay"] },
+   { name: "TikTokEarn", category: "Social Tasks", description: "🎵 Earn by creating TikTok content", bonus: "Get paid per video view", features: ["Create short videos", "Earn based on views"], link: "https://tiktokearn.com", withdrawMethod: "MEXC", withdrawLink: "https://www.mexc.com/?shareCode=mexc-EXMA", logo: "images/TikTokEarn.webp", badges: ["NEW", "HOT"] },
+   { name: "TweetPay", category: "Social Tasks", description: "🐦 Get paid for Twitter/X tasks", bonus: "Earn for tweets & retweets", features: ["Tweet & retweet tasks", "Engage with sponsored content"], link: "https://tweetpay.com", withdrawMethod: "PayPal", withdrawLink: "https://www.paypal.com/", logo: "images/TweetPay.webp", badges: ["Bonus", "EASY"] },
+   { name: "YouGet", category: "Social Tasks", description: "▶️ Earn from YouTube engagement", bonus: "Get paid for watching & subscribing", features: ["Watch videos & subscribe", "Like, comment & share tasks"], link: "https://youget.com", withdrawMethod: "PayPal", withdrawLink: "https://www.paypal.com/", logo: "images/YouGet.webp", badges: ["TOP", "Trusted"] },
  ];
 
 // ============================================
@@ -189,7 +189,53 @@ const PAGE_CONFIG = {
 };
 
 // ============================================
-// DETECT CURRENT PAGE from URL
+// BADGE SYSTEM — Color-coded & Icon-driven
+// ============================================
+const BADGE_MAP = {
+  'TOP':         { class: 'badge-top',     icon: 'fire'   },
+  'HOT':         { class: 'badge-hot',     icon: 'fire'   },
+  'NEW':         { class: 'badge-new',     icon: 'sparkle'},
+  'Trusted':     { class: 'badge-trusted', icon: 'shield' },
+  'EASY':        { class: 'badge-easy',    icon: 'bolt'   },
+  'Contest':     { class: 'badge-contest', icon: 'trophy' },
+  'Bonus':       { class: 'badge-bonus',   icon: 'gift'   },
+  'GIFT':        { class: 'badge-gift',    icon: 'gift'   },
+  'Popular':     { class: 'badge-popular', icon: 'star'   },
+  'Fast Pay':    { class: 'badge-fast',    icon: 'bolt'   },
+  'Boost':       { class: 'badge-boost',   icon: 'rocket' },
+  'Play':        { class: 'badge-play',    icon: 'gamepad'},
+  '7 Bonuses':   { class: 'badge-bonus',   icon: 'gift'   },
+  '9 Bonuses':   { class: 'badge-bonus',   icon: 'gift'   },
+  '11 Bonuses':  { class: 'badge-bonus',   icon: 'gift'   },
+  '12 Cryptos':  { class: 'badge-trusted', icon: 'shield' },
+  'Available':   { class: 'badge-fast',    icon: 'bolt'   },
+};
+
+const ICONS = {
+  fire:    '<path d="M323.56 51.2c-20.8 19.3-39.58 39.59-56.22 59.97C240.08 73.62 206.28 35.53 168 0 69.74 91.17 0 209.96 0 281.6 0 408.85 100.29 512 224 512s224-103.15 224-230.4c0-53.27-51.98-163.14-124.44-230.4z"/>',
+  sparkle: '<path d="M224 0l50 150 150 50-150 50-50 150-50-150L24 200l150-50z"/>',
+  shield:  '<path d="M256 0L0 96v128c0 141.4 109.3 273.3 256 320 146.7-46.7 256-178.6 256-320V96L256 0zm0 464c-113.3-34.7-208-141.3-208-240V120l208-78 208 78v104c0 98.7-94.7 205.3-208 240z"/>',
+  bolt:    '<path d="M296 0L96 288h128l-32 224 200-288H264z"/>',
+  trophy:  '<path d="M448 64h-64V32c0-17.7-14.3-32-32-32H96c-17.7 0-32 14.3-32 32v32H0v64c0 70.7 57.3 128 128 128h8.6c17.5 50.6 63.1 88.7 119.4 96.5V448H160c-17.7 0-32 14.3-32 32v32h224v-32c0-17.7-14.3-32-32-32h-96v-87.5c56.3-7.8 101.9-45.9 119.4-96.5H448c35.3 0 64-28.7 64-64v-64h-64zM128 192c-35.3 0-64-28.7-64-64V96h64v96zm320-64c0 35.3-28.7 64-64 64V96h64v32z"/>',
+  gift:    '<path d="M464 144h-96.3c5.2-10.3 8.3-21.8 8.3-34 0-43.6-35.4-79-79-79-24.7 0-46.7 11.4-61 29.1C221.7 42.4 199.7 31 175 31c-43.6 0-79 35.4-79 79 0 12.2 3.1 23.7 8.3 34H16c-8.8 0-16 7.2-16 16v64c0 8.8 7.2 16 16 16h16v240c0 17.7 14.3 32 32 32h352c17.7 0 32-14.3 32-32V240h16c8.8 0 16-7.2 16-16v-64c0-8.8-7.2-16-16-16zM297 110c0 17.6-14.4 32-32 32s-32-14.4-32-32 14.4-32 32-32 32 14.4 32 32zM175 110c0-17.6 14.4-32 32-32s32 14.4 32 32-14.4 32-32 32-32-14.4-32-32zM64 192h160v64H64v-64zm16 96h144v192H80V288zm288 192H272V288h144v192zm16-224H240v-64h160v64z"/>',
+  star:    '<path d="M256 0l79 173 191 22-142 132 38 188-166-96-166 96 38-188L-14 195l191-22z"/>',
+  rocket:  '<path d="M256 0c-64 0-128 64-128 160v32H96c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32h32v32c0 35.3 28.7 64 64 64h128c35.3 0 64-28.7 64-64v-32h32c17.7 0 32-14.3 32-32v-64c0-17.7-14.3-32-32-32h-32v-32c0-96-64-160-128-160zM192 160c0-35.3 28.7-64 64-64s64 28.7 64 64v32H192v-32zm64 288c-35.3 0-64-28.7-64-64h128c0 35.3-28.7 64-64 64z"/>',
+  gamepad: '<path d="M480 96H32C14.3 96 0 110.3 0 128v256c0 17.7 14.3 32 32 32h448c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32zM160 320h-48v48H80v-48H32v-32h48v-48h32v48h48v32zm160 32c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm64-96c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"/>'
+};
+
+function buildBadges(badges) {
+  if (!badges || !badges.length) return '';
+  return badges.map(badge => {
+    const meta = BADGE_MAP[badge] || { class: 'badge-default', icon: null };
+    const iconSvg = meta.icon
+      ? `<svg class="badge-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">${ICONS[meta.icon]}</svg>`
+      : '';
+    return `<span class="badge ${meta.class}">${iconSvg}<span>${badge}</span></span>`;
+  }).join('');
+}
+
+// ============================================
+// DETECT CURRENT PAGE
 // ============================================
 function getCurrentPage() {
   const path = window.location.pathname.split('/').pop() || 'index.html';
@@ -208,54 +254,18 @@ function renderCards(data, containerId) {
   grid.innerHTML = '';
 
   data.forEach(site => {
-    // ---- BUILD BADGES (with fire icon for TOP / HOT) ----
-    let badgesHtml = '';
-    if (site.badges && site.badges.length > 0) {
-      site.badges.forEach(badge => {
-        let badgeClass = 'badge-bonus';
+    const badgesHtml = buildBadges(site.badges);
 
-        if (badge === 'NEW') badgeClass = 'badge-new';
-        if (badge === 'HOT' || badge === 'TOP' || badge === 'Popular') badgeClass = 'badge-popular';
-
-        // TOP badge → fire icon
-        if (badge === 'TOP') {
-          badgesHtml += `
-            <span class="badge ${badgeClass} badge-with-icon">
-              <svg class="badge-icon" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M323.56 51.2c-20.8 19.3-39.58 39.59-56.22 59.97C240.08 73.62 206.28 35.53 168 0 69.74 91.17 0 209.96 0 281.6 0 408.85 100.29 512 224 512s224-103.15 224-230.4c0-53.27-51.98-163.14-124.44-230.4zm-19.47 340.65C282.43 407.01 255.72 416 226.86 416 154.71 416 96 368.26 96 290.75c0-38.61 24.31-72.63 72.79-130.75 6.93 7.98 98.83 125.34 98.83 125.34l58.63-66.88c4.14 6.85 7.91 13.55 11.27 19.97 27.35 52.19 15.81 118.97-33.43 153.42z"/>
-              </svg>
-              <span>${badge}</span>
-            </span>`;
-        }
-        // HOT badge → fire icon
-        else if (badge === 'HOT') {
-          badgesHtml += `
-            <span class="badge ${badgeClass} badge-with-icon">
-              <svg class="badge-icon" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M323.56 51.2c-20.8 19.3-39.58 39.59-56.22 59.97C240.08 73.62 206.28 35.53 168 0 69.74 91.17 0 209.96 0 281.6 0 408.85 100.29 512 224 512s224-103.15 224-230.4c0-53.27-51.98-163.14-124.44-230.4zm-19.47 340.65C282.43 407.01 255.72 416 226.86 416 154.71 416 96 368.26 96 290.75c0-38.61 24.31-72.63 72.79-130.75 6.93 7.98 98.83 125.34 98.83 125.34l58.63-66.88c4.14 6.85 7.91 13.55 11.27 19.97 27.35 52.19 15.81 118.97-33.43 153.42z"/>
-              </svg>
-              <span>${badge}</span>
-            </span>`;
-        }
-        // All other badges → plain
-        else {
-          badgesHtml += `<span class="badge ${badgeClass}">${badge}</span>`;
-        }
-      });
-    }
-
-    // ---- BUILD FEATURE LIST ----
     let featuresHtml = '';
     site.features.forEach(feature => {
       featuresHtml += `<li><i>🎁</i><span>${feature}</span></li>`;
     });
 
-    // ---- BUILD CARD ----
     const card = document.createElement('div');
     card.className = 'site-card';
     card.innerHTML = `
       <div class="card-header">
-        <img src="${site.logo}" alt="${site.name}" class="card-logo" loading="lazy" onerror="this.src='https://placehold.co/47x47/333/fff?text=' + encodeURIComponent('${site.name.charAt(0)}')">
+        <img src="${site.logo}" alt="${site.name}" class="card-logo" loading="lazy" onerror="this.src='https://placehold.co/47x47/7C3AED/fff?text=' + encodeURIComponent('${site.name.charAt(0)}')">
         <div class="card-title-group">
           <a href="${site.link}" target="_blank" class="card-name">${site.name}</a>
           <div class="card-category">${site.category}</div>
@@ -284,7 +294,7 @@ function renderCards(data, containerId) {
 }
 
 // ============================================
-// INIT - runs on every page
+// INIT
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
   const currentPage = getCurrentPage();
@@ -295,7 +305,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  // 1. Update hero content
   const heroTag = document.getElementById('heroTag');
   const heroTitle = document.getElementById('heroTitle');
   const heroSubtitle = document.getElementById('heroSubtitle');
@@ -313,11 +322,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }).join('');
   }
 
-  // 2. Show / hide tip bar
   const tipBar = document.getElementById('tipBar');
   if (tipBar && !config.showTip) tipBar.style.display = 'none';
 
-  // 3. Update page title
   const titles = {
     'index': 'EFCAC – Earn Free Crypto!',
     'lux-sites': 'Lux Sites - EFCAC',
@@ -331,7 +338,6 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   if (titles[currentPage]) document.title = titles[currentPage];
 
-  // 4. Render cards (only if grid exists)
   const grid = document.getElementById('siteGrid');
   if (grid) renderCards(config.data, 'siteGrid');
 });

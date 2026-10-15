@@ -22,8 +22,6 @@ const MENU_CONFIG = [
     { type: 'link', label: 'Passive Income',       href: 'passive-income.html', page: 'passive-income' },
     { type: 'link', label: 'Play & Earn',          href: 'play-earn.html',      page: 'play-earn' },
     { type: 'link', label: 'Earn By Social Media', href: 'earn-social.html',    page: 'earn-social' }
-    // 👇 ADD NEW LINKS HERE 👇
-    // { type: 'link', label: 'Free Spins',    href: 'free-spins.html',    page: 'free-spins' },
 ];
 
 // ---- FOOTER LINKS ----
@@ -74,7 +72,6 @@ function buildMenuHTML() {
             const active = item.page === currentPage ? ' class="active"' : '';
             html += `<li><a href="${item.href}"${active}>${item.label}</a></li>`;
         } else if (item.type === 'dropdown') {
-            // Check if any child is active
             const childActive = item.items.some(sub => sub.page === currentPage);
             const parentActive = childActive ? ' class="active"' : '';
             html += `<li class="dropdown">
@@ -108,7 +105,6 @@ function injectMenu() {
     const nav = document.querySelector('.main-nav');
     if (!nav) return;
 
-    // Add hamburger button + nav links
     nav.innerHTML = `
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
             <span></span><span></span><span></span>
@@ -136,8 +132,8 @@ function injectFooter() {
                                     <stop offset="100%" stop-color="#C98A1E"/>
                                 </radialGradient>
                                 <linearGradient id="footAccG" x1="0" y1="0" x2="1" y2="1">
-                                    <stop offset="0%" stop-color="#FF6B2C"/>
-                                    <stop offset="100%" stop-color="#E64A00"/>
+                                    <stop offset="0%" stop-color="#9B6BFF"/>
+                                    <stop offset="100%" stop-color="#5B21B6"/>
                                 </linearGradient>
                             </defs>
                             <ellipse cx="100" cy="155" rx="80" ry="28" fill="#A5650E"/>
@@ -172,10 +168,9 @@ function injectFooter() {
 }
 
 // ============================================
-// MENU BEHAVIOR (dropdown + mobile toggle)
+// MENU BEHAVIOR
 // ============================================
 function initMenuBehavior() {
-    // ---- MOBILE HAMBURGER TOGGLE ----
     const toggle = document.getElementById('menuToggle');
     const nav = document.querySelector('.main-nav');
 
@@ -187,7 +182,6 @@ function initMenuBehavior() {
             toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         });
 
-        // Close mobile menu when a link is clicked
         nav.querySelectorAll('.nav-links > li > a').forEach(link => {
             link.addEventListener('click', () => {
                 if (window.innerWidth <= 1000) {
@@ -197,7 +191,6 @@ function initMenuBehavior() {
             });
         });
 
-        // Close mobile menu on outside click
         document.addEventListener('click', (e) => {
             if (window.innerWidth <= 1000 && nav.classList.contains('open') && !nav.contains(e.target)) {
                 nav.classList.remove('open');
@@ -206,7 +199,6 @@ function initMenuBehavior() {
         });
     }
 
-    // ---- DROPDOWN (desktop hover + click) ----
     const dropdown = document.querySelector('.dropdown');
     const dropdownToggle = document.querySelector('[data-dropdown]');
 
@@ -231,12 +223,7 @@ function initMenuBehavior() {
         dropdownToggle.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
-            // On mobile, the parent link toggles the submenu
-            if (window.innerWidth <= 1000) {
-                dropdown.classList.toggle('open');
-            } else {
-                dropdown.classList.toggle('open');
-            }
+            dropdown.classList.toggle('open');
         });
 
         document.addEventListener('click', (e) => {
@@ -245,7 +232,6 @@ function initMenuBehavior() {
             }
         });
 
-        // Auto-close dropdown when a child link is clicked
         dropdown.querySelectorAll('.dropdown-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 dropdown.classList.remove('open');
@@ -257,7 +243,6 @@ function initMenuBehavior() {
         });
     }
 
-    // Close mobile menu on window resize to desktop
     window.addEventListener('resize', () => {
         if (window.innerWidth > 1000 && nav) {
             nav.classList.remove('open');
@@ -267,7 +252,7 @@ function initMenuBehavior() {
 }
 
 // ============================================
-// AUTO-INIT — runs on every page
+// AUTO-INIT
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
     injectMenu();
