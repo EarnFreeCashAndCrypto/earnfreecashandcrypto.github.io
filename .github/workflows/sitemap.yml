@@ -2,8 +2,11 @@ name: Generate Sitemap
 
 on:
   push:
-    branches: ["main"] # Triggers when code is pushed to the main branch
-  workflow_dispatch: # Allows manual triggering
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: write  # ⚠️ Add this line to allow write access
 
 jobs:
   sitemap_job:
@@ -14,15 +17,13 @@ jobs:
       - name: Checkout the repo
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Must be 0 to get git commit history for generating lastmod
+          fetch-depth: 0
 
       - name: Generate the sitemap
         uses: cicirello/generate-sitemap@v1
         with:
-          base-url-path: https://earnfreecashandcrypto.github.io/ # ⚠️ Replace this with your actual website URL, note the trailing slash
-          # Optional: If you want to remove .html suffix from URLs, you can add the following line (GitHub Pages supports this)
-          # drop-html-extension: true
-          
+          base-url-path: https://earnfreecashandcrypto.github.io/
+
       - name: Commit and Push
         run: |
           git config --local user.email "action@github.com"
